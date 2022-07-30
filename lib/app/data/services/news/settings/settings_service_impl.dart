@@ -5,7 +5,7 @@ import 'package:getxnavigationrail/app/data/repositories/settings/settings_repos
 import './settings_service.dart';
 
 class SettingsServiceImpl implements SettingsService {
-  SettingsRepository _repository;
+  final SettingsRepository _repository;
   SettingsServiceImpl({
     required SettingsRepository repository,
   }) : _repository = repository;

@@ -8,6 +8,6 @@ class ProfilePage extends GetView<ProfileController> {
 
   @override
   Widget build(BuildContext context) {
-    return Text('PROFILE PAGE');
+    return const Text('PROFILE PAGE');
   }
 }

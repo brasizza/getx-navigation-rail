@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:get_storage/get_storage.dart';
 
 import './local_storage.dart';
@@ -6,6 +8,7 @@ class LocalStorageGet implements LocalStorage {
   late GetStorage storage;
   @override
   Future<LocalStorageGet> init() async {
+    log('Start GetStorage ');
     await GetStorage.init();
     storage = GetStorage();
     return this;

@@ -28,7 +28,7 @@ class HomeController extends GetxController {
   }
 
   void _checkTheme() {
-    final mode = _storage.getData<String>('mode');
+    final mode = _storage.getData<String?>('mode') ?? '';
     if (mode == 'dark') {
       Get.changeThemeMode(ThemeMode.dark);
     } else if (mode == 'light') {

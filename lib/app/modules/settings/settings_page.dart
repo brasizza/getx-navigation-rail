@@ -10,7 +10,7 @@ class SettingsPage extends GetView<SettingsController> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text("Settings Page"),
+        const Text("Settings Page"),
         Expanded(child: controller.obx((settings) {
           return Column(
             children: [
@@ -68,14 +68,14 @@ class SettingsPage extends GetView<SettingsController> {
 
                         Get.changeThemeMode(ThemeMode.dark);
                       },
-                      child: Text("Dark mode")),
+                      child: const Text("Dark mode")),
                   ElevatedButton(
                       onPressed: () async {
                         await controller.saveSettings(settings!.copyWith(mode: 'light'));
 
                         Get.changeThemeMode(ThemeMode.light);
                       },
-                      child: Text("Light mode")),
+                      child: const Text("Light mode")),
                 ],
               )
             ],

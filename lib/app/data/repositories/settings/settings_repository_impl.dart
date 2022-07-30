@@ -7,7 +7,7 @@ import 'package:getxnavigationrail/app/data/models/settings.dart';
 import './settings_repository.dart';
 
 class SettingsRepositoryImpl implements SettingsRepository {
-  LocalStorage _storage;
+  final LocalStorage _storage;
   SettingsRepositoryImpl({
     required LocalStorage storage,
   }) : _storage = storage;
@@ -26,10 +26,10 @@ class SettingsRepositoryImpl implements SettingsRepository {
   @override
   Settings? getSettings() {
     return Settings(
-      mode: _storage.getData<String>('mode') ?? 'light',
-      switchSelected: _storage.getData<bool>('swtich') ?? false,
-      radioSelected: _storage.getData<int>('radio') ?? 0,
-      slide: _storage.getData<double>('slide') ?? 0.00,
+      mode: _storage.getData<String?>('mode') ?? 'light',
+      switchSelected: _storage.getData<bool?>('swtich') ?? false,
+      radioSelected: _storage.getData<int?>('radio') ?? 0,
+      slide: _storage.getData<double?>('slide') ?? 0.00,
     );
   }
 }

@@ -24,13 +24,13 @@ class NewsPage extends GetView<NewsController> {
                       onPressed: () {
                         controller.getRandomNew();
                       },
-                      child: Text("Another random new")),
+                      child: const Text("Another random new")),
                   ArticlePage(article: article!),
                 ],
               );
             },
             onEmpty: const Text("No news to show for you!"),
-            onLoading: const CircularProgressIndicator.adaptive(),
+            onLoading: const Center(child: CircularProgressIndicator.adaptive()),
             onError: (error) => Text(error.toString()),
           ),
         ),
