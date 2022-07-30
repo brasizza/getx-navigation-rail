@@ -5,7 +5,7 @@ import 'package:getxnavigationrail/app/modules/news/components/article_page.dart
 import './news_controller.dart';
 
 class NewsPage extends GetView<NewsController> {
-  const NewsPage({Key? key}) : super(key: key);
+  const NewsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
